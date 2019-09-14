@@ -1,0 +1,43 @@
+#about {
+    width: 100%;
+    text-align: center;
+
+    iframe {
+        width: 100%;
+        height: 450px;
+    }
+
+    .parallax-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+
+        h2 {
+            color: #fff;
+            font-size: 32px;
+            font-weight: 800;
+        }
+    }
+
+    .the-man {
+        @include parallax-top('../img/rob.jpg');
+    }
+
+    .the-challenge {
+        @include parallax-top('../img/race_distance.jpg');
+    }
+
+    .the-charity {
+        @include parallax-top('../img/the_charity.jpg');
+    }
+
+    .text {
+        background: #fff;
+        padding: 20px;
+
+        p {
+            margin: 0;
+        }
+    }
+}
