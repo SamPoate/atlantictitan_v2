@@ -1,3 +1,5 @@
+import '../scss/main.scss';
+
 const banana = () => {
     let f = 'Hello';
 

@@ -9,6 +9,18 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: { url: false }
+                    },
+                    'resolve-url-loader',
+                    'sass-loader'
+                ]
+            },
+            {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 query: {
