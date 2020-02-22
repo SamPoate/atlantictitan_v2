@@ -1,43 +1,282 @@
 #about {
     width: 100%;
     text-align: center;
+    background: #fff;
 
-    iframe {
-        width: 100%;
-        height: 450px;
-    }
-
-    .parallax-title {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 500px;
+    > div {
+        padding: 20px 0;
+        margin: 0 auto;
 
         h2 {
-            color: #fff;
+            margin: 0;
+            padding: 20px 0;
             font-size: 32px;
-            font-weight: 800;
+        }
+
+        p {
+            padding: 0 20px;
+        }
+    }
+
+    .introduction {
+        h2 {
+            padding-top: 30px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        svg {
+            width: 80px;
+            height: 100px;
+            margin: 0 auto;
+            cursor: pointer;
+
+            polygon {
+                margin: 0 auto;
+            }
         }
     }
 
     .the-man {
-        @include parallax-top('../img/rob.jpg');
+        background: linear-gradient(to bottom, white, #29334e);
+
+        > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            > p {
+                color: white;
+                width: 600px;
+                margin: 0 auto;
+            }
+
+            > div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+
+                > img {
+                    width: 50%;
+                    box-shadow: 0 0 20px 0 #000;
+                }
+            }
+        }
     }
 
-    .the-challenge {
-        @include parallax-top('../img/race_distance.jpg');
+    .challenge {
+        background: #29334e;
+        color: white;
+        padding-bottom: 0;
+
+        h2 {
+            padding-top: 50px;
+        }
+
+        > p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        > iframe {
+            width: 100%;
+            height: 400px;
+            transform: translateY(2px);
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            padding-top: 20px;
+
+            .card {
+                width: 200px;
+                padding: 10px;
+
+                h3 {
+                    margin-top: 0;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
     }
 
-    .the-charity {
-        @include parallax-top('../img/the_charity.jpg');
+    #sponsorship {
+        margin: 0;
+        padding: 0;
+        transform: translateY(-60px);
     }
 
-    .text {
-        background: #fff;
-        padding: 20px;
+    .sponsorship {
+        padding-bottom: 0;
+        background: #131515;
+        // background: #b8c5d6;
 
-        p {
+        h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        > h3 {
+            font-size: 22px;
+        }
+
+        .title-card {
+            width: 100%;
+            padding: 10px 0 30px;
+            background: #fff;
+            border-bottom: 1px solid #000;
+
+            h3 {
+                font-size: 32px;
+                color: #773344;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid #000;
+
+            h2 {
+                color: #fff;
+            }
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                width: calc(100% / 3);
+                padding: 20px 0 0;
+                background: #fff;
+
+                &:nth-child(2) {
+                    border-left: 1px solid black;
+                    border-right: 1px solid black;
+                }
+
+                h3 {
+                    font-size: 32px;
+                    margin: 0 0 10px;
+
+                    &.gold {
+                        color: gold;
+                    }
+
+                    &.silver {
+                        color: silver;
+                    }
+
+                    &.bronze {
+                        color: #cd7f32;
+                    }
+                }
+
+                h4 {
+                    font-size: 22px;
+                }
+
+                h5 {
+                    font-size: 18px;
+                    margin: 10px 0;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+
+                ul {
+                    padding: 0 20px;
+                    margin: 0 10px;
+
+                    &:last-of-type {
+                        margin-bottom: 10px;
+                    }
+
+                    li {
+                        font-size: 14px;
+                        list-style-type: circle;
+                        margin: 5px 0;
+                    }
+                }
+
+                .sponsor-me {
+                    background: #4b88a2;
+                    margin-top: auto;
+                    padding: 20px 0;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: #d3d4d9;
+                    }
+
+                    a {
+                        text-align: center;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .other-sponsorship-container {
+            display: flex;
+            background: #fff;
+
+            h6 {
+                margin: 0;
+                font-size: 26px;
+            }
+
+            > div {
+                width: 50%;
+                padding: 20px 0;
+
+                &:first-of-type {
+                    border-right: 1px solid black;
+                }
+            }
+        }
+
+        > img {
+            width: 100%;
             margin: 0;
+            background: #4b88a2;
+        }
+    }
+
+    .charities {
+        background: #e0e0e0;
+        color: white;
+
+        .side-by-side {
+            display: flex;
+
+            p,
+            iframe {
+                width: 50%;
+            }
+
+            iframe {
+                height: 300px;
+            }
+        }
+    }
+
+    .news {
+        iframe {
+            width: 95%;
         }
     }
 }

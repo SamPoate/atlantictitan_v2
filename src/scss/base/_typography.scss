@@ -1,3 +1,15 @@
 /**
  * Basic typography style for copy text
  */
+
+h1,
+h2,
+h3 {
+    font-family: $text-font-stack;
+    font-weight: 500;
+}
+
+p,
+ul li {
+    font-family: $p-font-stack;
+}

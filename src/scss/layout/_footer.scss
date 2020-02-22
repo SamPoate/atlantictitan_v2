@@ -1,3 +1,43 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    > div {
+        width: 50%;
+
+        &:nth-last-of-type(2),
+        &:last-of-type {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px;
+
+        img {
+            width: calc(100% - 20px);
+        }
+    }
+
+    .social-media {
+        padding-top: 20px;
+
+        i {
+            color: #fff;
+        }
+    }
+
+    .copy {
+        color: #fff;
+    }
+}
