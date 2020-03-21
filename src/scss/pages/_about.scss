@@ -385,8 +385,17 @@
             justify-content: center;
             padding: 20px 0;
 
+            @include mobile {
+                flex-direction: column;
+            }
+
             a ~ a {
                 margin-left: 10px;
+
+                @include mobile {
+                    margin-top: 10px;
+                    margin-left: 0;
+                }
             }
         }
     }
