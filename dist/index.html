@@ -31,26 +31,93 @@
         <title>Rob Hamilton | Atlantic Titan</title>
     </head>
     <body>
-        <nav id="navbar">
+        <nav id="navbar" class="nav">
             <h1 class="logo text-primary">
                 <a href="#showcase">ATLANTIC TITAN</a>
             </h1>
-            <ul>
-                <li><a href="#showcase">Home</a></li>
-                <li><a href="#about">The Man</a></li>
-                <li><a href="#challenge">The Challenge</a></li>
-                <li><a href="#charity">The Charities</a></li>
-                <li><a href="#charity">The Gallery</a></li>
-                <li><a href="#main-footer">Contact</a></li>
-                <li>
+            <ul id="menu" class="nav__menu">
+                <li class="nav__item">
+                    <a href="#showcase" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">The Man</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#challenge" class="nav__link">The Challenge</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#charity" class="nav__link">The Charities</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#charity" class="nav__link">The Gallery</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#main-footer" class="nav__link">Contact</a>
+                </li>
+                <li class="nav__item">
                     <a
                         href="https://robhamilton.paperform.co"
-                        class="highlight"
+                        class="nav__link"
                         target="_blank"
                         >DONATE</a
                     >
                 </li>
             </ul>
+            <!-- MENU TOGGLE BUTTON -->
+            <a
+                href="#nav"
+                class="nav__toggle"
+                role="button"
+                aria-expanded="false"
+                aria-controls="menu"
+            >
+                <svg
+                    class="menuicon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="50"
+                    height="50"
+                    viewBox="0 0 50 50"
+                >
+                    <title>Toggle Menu</title>
+                    <g>
+                        <line
+                            class="menuicon__bar"
+                            x1="13"
+                            y1="16.5"
+                            x2="37"
+                            y2="16.5"
+                        />
+                        <line
+                            class="menuicon__bar"
+                            x1="13"
+                            y1="24.5"
+                            x2="37"
+                            y2="24.5"
+                        />
+                        <line
+                            class="menuicon__bar"
+                            x1="13"
+                            y1="24.5"
+                            x2="37"
+                            y2="24.5"
+                        />
+                        <line
+                            class="menuicon__bar"
+                            x1="13"
+                            y1="32.5"
+                            x2="37"
+                            y2="32.5"
+                        />
+                        <circle
+                            class="menuicon__circle"
+                            r="23"
+                            cx="25"
+                            cy="25"
+                        />
+                    </g>
+                </svg>
+            </a>
+            <div class="splash"></div>
         </nav>
         <section id="showcase">
             <h1>
@@ -211,61 +278,6 @@
                 <h2>CORPORATE PARTNERSHIPS</h2>
                 <div class="card-container">
                     <div class="card">
-                        <h3 class="silver">SILVER</h3>
-                        <h4>£10,000</h4>
-                        <h5>Branding</h5>
-                        <ul>
-                            <li>
-                                Your company’s logo will be displayed on the
-                                hull of the boat.
-                            </li>
-                            <li>
-                                Your company’s logo will be showcased as a
-                                silver partner on the Atlantic Titan website
-                            </li>
-                        </ul>
-                        <h5>Media</h5>
-                        <ul>
-                            <li>
-                                Your products and company will be endorsed on
-                                social media through photos and videos.
-                            </li>
-                            <li>
-                                You will have access to the Atlantic Titan
-                                private media library.
-                            </li>
-                        </ul>
-                        <h5>Corporate Engagement</h5>
-                        <ul>
-                            <li>
-                                The boat and I will be available for 1 event pre
-                                and post-race. Examples include:
-                                <ul>
-                                    <li>
-                                        Use of the boat for team
-                                        building/training events.
-                                    </li>
-                                    <li>
-                                        I can offer a day in your office to
-                                        speak to staff/clients about the
-                                        challenge
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                I will attend any publicity or promotional
-                                events pre and post-race.
-                            </li>
-                        </ul>
-                        <div class="sponsor-me">
-                            <a
-                                href="mailto:atlantictitan2020@gmail.com?Subject=Silver%20Sponsorship"
-                                target="_top"
-                                >Sponsor Me</a
-                            >
-                        </div>
-                    </div>
-                    <div class="card">
                         <h3 class="gold">GOLD</h3>
                         <h4>£15,000</h4>
                         <div>
@@ -317,6 +329,61 @@
                         <div class="sponsor-me">
                             <a
                                 href="mailto:atlantictitan2020@gmail.com?Subject=Gold%20Sponsorship"
+                                target="_top"
+                                >Sponsor Me</a
+                            >
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="silver">SILVER</h3>
+                        <h4>£10,000</h4>
+                        <h5>Branding</h5>
+                        <ul>
+                            <li>
+                                Your company’s logo will be displayed on the
+                                hull of the boat.
+                            </li>
+                            <li>
+                                Your company’s logo will be showcased as a
+                                silver partner on the Atlantic Titan website
+                            </li>
+                        </ul>
+                        <h5>Media</h5>
+                        <ul>
+                            <li>
+                                Your products and company will be endorsed on
+                                social media through photos and videos.
+                            </li>
+                            <li>
+                                You will have access to the Atlantic Titan
+                                private media library.
+                            </li>
+                        </ul>
+                        <h5>Corporate Engagement</h5>
+                        <ul>
+                            <li>
+                                The boat and I will be available for 1 event pre
+                                and post-race. Examples include:
+                                <ul>
+                                    <li>
+                                        Use of the boat for team
+                                        building/training events.
+                                    </li>
+                                    <li>
+                                        I can offer a day in your office to
+                                        speak to staff/clients about the
+                                        challenge
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                I will attend any publicity or promotional
+                                events pre and post-race.
+                            </li>
+                        </ul>
+                        <div class="sponsor-me">
+                            <a
+                                href="mailto:atlantictitan2020@gmail.com?Subject=Silver%20Sponsorship"
                                 target="_top"
                                 >Sponsor Me</a
                             >

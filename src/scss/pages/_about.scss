@@ -47,10 +47,20 @@
             align-items: center;
             justify-content: center;
 
+            @include mobile {
+                flex-direction: column-reverse;
+                padding: 0 10px;
+            }
+
             > p {
                 color: white;
                 width: 600px;
                 margin: 0 auto;
+
+                @include mobile {
+                    width: 100%;
+                    padding: 0;
+                }
             }
 
             > div {
@@ -61,7 +71,11 @@
 
                 > img {
                     width: 50%;
-                    box-shadow: 0 0 20px 0 #000;
+                    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+
+                    @include mobile {
+                        margin-bottom: 20px;
+                    }
                 }
             }
         }
@@ -83,6 +97,10 @@
 
         .video-container {
             padding: 20px;
+
+            @include mobile {
+                padding: 10px;
+            }
 
             iframe {
                 width: 100%;
@@ -138,6 +156,10 @@
             display: flex;
             justify-content: space-around;
 
+            @include mobile {
+                flex-direction: column;
+            }
+
             h2 {
                 color: #fff;
             }
@@ -170,8 +192,17 @@
                 box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
                 cursor: pointer;
 
+                @include mobile {
+                    width: calc(100% - 20px);
+                    margin: 0 auto;
+                }
+
                 &:nth-child(2) {
                     margin: 20px 0;
+
+                    @include mobile {
+                        margin: 10px auto;
+                    }
                 }
 
                 &:hover {
@@ -294,13 +325,31 @@
             margin-bottom: 40px;
         }
 
+        > div {
+            &:nth-of-type(2) {
+                @include mobile {
+                    flex-direction: column-reverse;
+                }
+            }
+        }
+
         .side-by-side {
             display: flex;
             margin: 20px 0;
 
+            @include mobile {
+                flex-direction: column;
+                padding: 10px;
+            }
+
             p,
             iframe {
                 width: 50%;
+
+                @include mobile {
+                    width: 100%;
+                    padding: 0;
+                }
             }
 
             iframe {

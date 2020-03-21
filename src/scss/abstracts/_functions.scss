@@ -28,3 +28,8 @@
 @function font($path, $base: $base-url) {
     @return asset($base, 'fonts/', $path);
 }
+
+@function circumference($r) {
+    $pi: 3.141592653;
+    @return 2 * $pi * $r;
+}

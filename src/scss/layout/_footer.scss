@@ -7,16 +7,29 @@ footer {
     padding: 50px 0 20px;
     background: #29334e;
 
+    @include mobile {
+        padding: 30px 0 20px;
+    }
+
     .logos-container {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include mobile {
+            flex-direction: column;
+        }
 
         a {
             margin: 0 10px;
 
             img {
                 height: 100px;
+
+                @include mobile {
+                    width: 100%;
+                    height: auto;
+                }
             }
         }
     }
