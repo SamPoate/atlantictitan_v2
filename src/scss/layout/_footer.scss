@@ -3,41 +3,50 @@
 // -----------------------------------------------------------------------------
 
 footer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    color: #fff;
+    padding: 50px 0 20px;
+    background: #29334e;
 
-    > div {
-        width: 50%;
-
-        &:nth-last-of-type(2),
-        &:last-of-type {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-    }
-
-    .logo {
+    .logos-container {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 20px;
 
-        img {
-            width: calc(100% - 20px);
+        a {
+            margin: 0 10px;
+
+            img {
+                height: 100px;
+            }
         }
     }
 
     .social-media {
-        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 0;
 
-        i {
-            color: #fff;
+        a {
+            margin: 0 5px;
+
+            i {
+                color: #fff;
+                transition: 0.1s;
+
+                &:hover {
+                    color: #e50050;
+                }
+            }
         }
     }
 
     .copy {
         color: #fff;
+
+        p {
+            text-align: center;
+            margin: 0;
+        }
     }
 }

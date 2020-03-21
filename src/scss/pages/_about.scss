@@ -81,10 +81,14 @@
             margin-bottom: 20px;
         }
 
-        > iframe {
-            width: 100%;
-            height: 400px;
-            transform: translateY(2px);
+        .video-container {
+            padding: 20px;
+
+            iframe {
+                width: 100%;
+                height: 400px;
+                transform: translateY(2px);
+            }
         }
 
         .card-container {
@@ -95,8 +99,8 @@
             padding-top: 20px;
 
             .card {
-                width: 200px;
-                padding: 10px;
+                width: 250px;
+                margin: 0 10px;
 
                 h3 {
                     margin-top: 0;
@@ -105,6 +109,7 @@
 
                 p {
                     font-size: 14px;
+                    padding: 0;
                 }
             }
         }
@@ -118,53 +123,63 @@
 
     .sponsorship {
         padding-bottom: 0;
-        background: #131515;
-        // background: #b8c5d6;
+        // background: #131515;
+        background: #b8c5d6;
 
         h2 {
             color: #fff;
-            margin-bottom: 20px;
         }
 
         > h3 {
             font-size: 22px;
         }
 
-        .title-card {
-            width: 100%;
-            padding: 10px 0 30px;
-            background: #fff;
-            border-bottom: 1px solid #000;
-
-            h3 {
-                font-size: 32px;
-                color: #773344;
-            }
-
-            p {
-                margin: 0;
-            }
-        }
-
         .card-container {
             display: flex;
             justify-content: space-around;
-            border-bottom: 1px solid #000;
 
             h2 {
                 color: #fff;
             }
 
+            @-webkit-keyframes slide-in-bottom {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+            @keyframes slide-in-bottom {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
             .card {
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 width: calc(100% / 3);
                 padding: 20px 0 0;
+                margin: 20px;
                 background: #fff;
+                box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+                cursor: pointer;
 
                 &:nth-child(2) {
-                    border-left: 1px solid black;
-                    border-right: 1px solid black;
+                    margin: 20px 0;
+                }
+
+                &:hover {
+                    .sponsor-me {
+                        -webkit-animation: slide-in-bottom 0.15s both;
+                        animation: slide-in-bottom 0.15s both;
+                        cursor: pointer;
+                    }
                 }
 
                 h3 {
@@ -207,61 +222,81 @@
 
                     li {
                         font-size: 14px;
-                        list-style-type: circle;
                         margin: 5px 0;
                     }
                 }
 
                 .sponsor-me {
-                    background: #4b88a2;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
                     margin-top: auto;
-                    padding: 20px 0;
-                    cursor: pointer;
-
-                    &:hover {
-                        background: #d3d4d9;
-                    }
+                    background: #29334e;
+                    opacity: 0;
 
                     a {
+                        color: #fff;
+                        font-weight: 500;
+                        font-size: 28px;
                         text-align: center;
-                        color: white;
+                        width: 100%;
+                        padding: 20px 0;
+                        transition: 0.1s;
+
+                        &:hover {
+                            color: #e50050;
+                        }
                     }
                 }
+            }
+        }
+
+        .boat-image-container {
+            padding: 20px 50px 10px;
+
+            img {
+                width: 100%;
             }
         }
 
         .other-sponsorship-container {
-            display: flex;
-            background: #fff;
+            padding: 30px;
 
             h6 {
-                margin: 0;
-                font-size: 26px;
+                color: #fff;
+                font-size: 28px;
+                margin: 0 0 20px;
             }
 
-            > div {
-                width: 50%;
-                padding: 20px 0;
+            p {
+                color: #fff;
 
-                &:first-of-type {
-                    border-right: 1px solid black;
+                &:last-of-type {
+                    margin-bottom: 30px;
                 }
             }
-        }
 
-        > img {
-            width: 100%;
-            margin: 0;
-            background: #4b88a2;
+            .btn--secondary {
+                margin: 0 auto;
+            }
         }
     }
 
     .charities {
-        background: #e0e0e0;
-        color: white;
+        background: #fff;
+
+        > p {
+            margin-bottom: 40px;
+        }
 
         .side-by-side {
             display: flex;
+            margin: 20px 0;
 
             p,
             iframe {
@@ -272,11 +307,38 @@
                 height: 300px;
             }
         }
+
+        .btn--tertiary {
+            margin: 0 auto;
+        }
     }
 
-    .news {
-        iframe {
-            width: 95%;
+    .media {
+        background: #b8c5d6;
+
+        h2 {
+            color: #fff;
+        }
+
+        .instagram-container {
+            width: 66%;
+            padding: 20px;
+            margin: 0 auto;
+
+            iframe {
+                width: 100%;
+            }
+        }
+
+        .news-buttons-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0;
+
+            a ~ a {
+                margin-left: 10px;
+            }
         }
     }
 }
