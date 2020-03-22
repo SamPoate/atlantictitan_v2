@@ -53,6 +53,7 @@
             left: 50%;
             transform: translateX(-50%);
             display: block;
+            visibility: hidden;
         }
     }
 
@@ -209,6 +210,7 @@
     //show the nav items
     .nav {
         &__menu {
+            display: block;
             visibility: visible;
         }
 
