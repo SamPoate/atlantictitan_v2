@@ -45,18 +45,29 @@
     &__menu {
         display: flex;
         padding-right: 20px;
+        z-index: 5;
+
+        @include mobile {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+        }
     }
 
     &__item {
         margin: 0 10px;
 
         @include mobile {
+            display: flex;
+            margin: 20px 0;
             opacity: 0;
             transition: all 0.3s cubic-bezier(0, 0.995, 0.99, 1) 0.3s;
 
-            @for $i from 1 through 5 {
-                &__item:nth-child(#{$i}) {
-                    transform: translateY(-40px * $i);
+            @for $i from 1 through 7 {
+                &:nth-child(#{$i}) {
+                    transform: translateY(-60px * $i);
                 }
             }
         }
@@ -67,7 +78,9 @@
             font-size: 14px;
 
             @include mobile {
-                font-size: 12px;
+                color: $dark-grey;
+                font-size: 22px;
+                margin: 0 auto;
             }
 
             &:hover {
@@ -78,21 +91,24 @@
     }
 
     &__toggle {
-        display: inline-block;
+        display: none;
         position: absolute;
         z-index: 10;
         padding: 0;
         border: 0;
         background: transparent;
         outline: 0;
-        right: 15px;
-        top: 15px;
+        right: 0;
+        top: 0;
         cursor: pointer;
         border-radius: 50%;
         transition: background-color 0.15s linear;
 
-        &:hover,
-        &:focus {
+        @include mobile {
+            display: inline-block;
+        }
+
+        &:hover {
             background-color: rgba(0, 0, 0, 0.5);
         }
     }
@@ -102,6 +118,7 @@
     display: block;
     cursor: pointer;
     color: white;
+    z-index: 5;
 
     transform: rotate(0deg);
     transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -139,7 +156,7 @@
         display: block;
         position: absolute;
         border-radius: 50%;
-        background-color: var(--splash-bg-color);
+        background-color: $light-grey;
 
         // screen diameter can be 142vmax at most,
         // circle needs to be twice that size to cover it

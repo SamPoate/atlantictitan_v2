@@ -29,6 +29,7 @@ document
 const nav = document.querySelector('#navbar');
 const menu = document.querySelector('#menu');
 const menuToggle = document.querySelector('.nav__toggle');
+const menuItems = document.querySelectorAll('.nav__item');
 let isMenuOpen = false;
 
 // TOGGLE MENU ACTIVE STATE
@@ -40,6 +41,16 @@ menuToggle.addEventListener('click', e => {
     menuToggle.setAttribute('aria-expanded', String(isMenuOpen));
     menu.hidden = !isMenuOpen;
     nav.classList.toggle('nav--open');
+});
+
+menuItems.forEach(menuItem => {
+    menuItem.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+
+        menuToggle.setAttribute('aria-expanded', String(isMenuOpen));
+        menu.hidden = !isMenuOpen;
+        nav.classList.toggle('nav--open');
+    });
 });
 
 // TRAP TAB INSIDE NAV WHEN OPEN
