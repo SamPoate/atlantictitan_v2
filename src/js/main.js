@@ -46,13 +46,15 @@ menuToggle.addEventListener('click', (e) => {
 });
 
 menuItems.forEach((menuItem) => {
-    menuItem.addEventListener('click', () => {
-        isMenuOpen = !isMenuOpen;
+    if (window.innerWidth < 661) {
+        menuItem.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
 
-        menuToggle.setAttribute('aria-expanded', String(isMenuOpen));
-        menu.hidden = !isMenuOpen;
-        nav.classList.toggle('nav--open');
-    });
+            menuToggle.setAttribute('aria-expanded', String(isMenuOpen));
+            menu.hidden = !isMenuOpen;
+            nav.classList.toggle('nav--open');
+        });
+    }
 });
 
 // TRAP TAB INSIDE NAV WHEN OPEN

@@ -311,10 +311,10 @@
                 height: 100px;
                 padding: 0;
                 margin: 0;
-                transform: translateX(-190px);
+                transform: translateX(-170px);
 
                 @include mobile {
-                    transform: translateX(-160px);
+                    transform: translateX(-120px);
                 }
 
                 li {
@@ -383,7 +383,7 @@
     }
 
     .charities {
-        padding-bottom: 0;
+        padding-bottom: 40px;
         background: #fff;
 
         > p {
@@ -443,6 +443,12 @@
 
         h2 {
             color: #fff;
+        }
+
+        h4 {
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 10px;
         }
 
         .instagram-container {

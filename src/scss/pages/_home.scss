@@ -10,6 +10,10 @@
         rgba(0, 0, 0, 0.2)
     );
 
+    @include mobile {
+        background-position: 10%;
+    }
+
     h1 {
         color: $light-grey;
         width: 80%;
