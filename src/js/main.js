@@ -1,5 +1,7 @@
 import '../scss/main.scss';
-import _ from 'lodash';
+// import _ from 'lodash';
+import $ from 'jquery';
+import 'slick-carousel';
 
 const navbar = document.getElementById('navbar');
 
@@ -15,13 +17,13 @@ const onScroll = () => {
 
 const scrollToPartnerships = () => {
     document.getElementById('sponsorship').scrollIntoView({
-        behavior: 'smooth'
+        behavior: 'smooth',
     });
 };
 
-const throttledOnScroll = _.throttle(onScroll, 100, {});
+// const throttledOnScroll = _.throttle(onScroll, 100, {});
 
-window.addEventListener('scroll', throttledOnScroll);
+window.addEventListener('scroll', onScroll);
 document
     .getElementById('more-arrows')
     .addEventListener('click', scrollToPartnerships);
@@ -33,7 +35,7 @@ const menuItems = document.querySelectorAll('.nav__item');
 let isMenuOpen = false;
 
 // TOGGLE MENU ACTIVE STATE
-menuToggle.addEventListener('click', e => {
+menuToggle.addEventListener('click', (e) => {
     e.preventDefault();
     isMenuOpen = !isMenuOpen;
 
@@ -43,7 +45,7 @@ menuToggle.addEventListener('click', e => {
     nav.classList.toggle('nav--open');
 });
 
-menuItems.forEach(menuItem => {
+menuItems.forEach((menuItem) => {
     menuItem.addEventListener('click', () => {
         isMenuOpen = !isMenuOpen;
 
@@ -54,7 +56,7 @@ menuItems.forEach(menuItem => {
 });
 
 // TRAP TAB INSIDE NAV WHEN OPEN
-nav.addEventListener('keydown', e => {
+nav.addEventListener('keydown', (e) => {
     // abort if menu isn't open or modifier keys are pressed
     if (!isMenuOpen || e.ctrlKey || e.metaKey || e.altKey) {
         return;
@@ -74,4 +76,11 @@ nav.addEventListener('keydown', e => {
             e.preventDefault();
         }
     }
+});
+
+$('#carousel_js').slick({
+    slidesToShow: window.innerWidth < 661 ? 2 : 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
 });
