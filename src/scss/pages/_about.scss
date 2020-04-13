@@ -311,11 +311,6 @@
                 height: 100px;
                 padding: 0;
                 margin: 0;
-                transform: translateX(-170px);
-
-                @include mobile {
-                    transform: translateX(-120px);
-                }
 
                 li {
                     height: 100px;

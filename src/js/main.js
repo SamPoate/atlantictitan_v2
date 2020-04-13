@@ -81,7 +81,7 @@ nav.addEventListener('keydown', (e) => {
 });
 
 $('#carousel_js').slick({
-    slidesToShow: window.innerWidth < 661 ? 2 : 4,
+    slidesToShow: window.innerWidth < 661 ? 1 : 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
