@@ -21,8 +21,7 @@
         "webpack-cli": "^3.3.11"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "sass": "node-sass --watch ./src/scss -o ./dist/css",
+        "build": "webpack",
         "webpack": "webpack --watch",
         "w": "webpack --watch"
     },
